@@ -1,0 +1,18 @@
+{
+    "manifest_version": 3,
+    "name": "Souverain New Tab",
+    "version": "1.0",
+    "chrome_url_overrides": {
+        "newtab": "newtab.html"
+    },
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "cocorico.mp3"
+            ],
+            "matches": [
+                "<all_urls>"
+            ]
+        }
+    ]
+}
