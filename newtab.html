@@ -44,14 +44,13 @@
                         Le nouvel onglet <b>gamer & souverain</b>. Rapide, stylé, sans tracking.
                     </p>
 
-                    <!-- ✅ Date/Heure -->
+                    <!-- Date/Heure + Météo -->
                     <div class="statusRow">
                         <div class="clockCard">
                             <div class="clockTime" id="clockTime">--:--:--</div>
                             <div class="clockDate" id="clockDate">--</div>
                         </div>
 
-                        <!-- ✅ Météo -->
                         <div class="weatherCard" id="weatherCard">
                             <div class="wTop">
                                 <span class="wEmoji" id="wEmoji">⛅</span>
@@ -81,75 +80,24 @@
                     autocomplete="off" autofocus />
                 <button class="btn" type="submit">GO</button>
             </form>
-            <div class="installRow">
-                <div class="installLeft">
-                    <span class="miniBadge">🧩 Extension</span>
-                    <span class="miniText">
-                        Souverain.fr remplace le “Nouvel onglet” : accès rapide aux services essentiels, sans tracking.
-                    </span>
-                </div>
 
-                <div class="installRight">
-                    <button class="miniBtn" id="howInstallBtn" type="button">Installer / partager</button>
-                    <button class="miniBtn ghost" id="copyLinkBtn" type="button">Copier le lien</button>
-                </div>
+
+
+
+            <div class="modalBody">
+                <p class="modalP">
+                    <b>Souverain</b> est une <b>extension</b> qui transforme votre “Nouvel onglet” en portail
+                    citoyen :
+                    services publics, santé, démarches, météo, accès rapide… <b>sans tracking</b>.
+                </p>
+
             </div>
 
-            <!-- Popup installation -->
-            <div class="modal" id="installModal" hidden>
-                <div class="modalCard" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-                    <div class="modalTop">
-                        <div>
-                            <div class="modalKicker">🧩 Extension navigateur</div>
-                            <h2 id="modalTitle">Installer Souverain.fr</h2>
-                        </div>
-                        <button class="modalClose" id="closeModal" type="button" aria-label="Fermer">✕</button>
-                    </div>
 
-                    <div class="modalBody">
-                        <p class="modalP">
-                            <b>Souverain</b> est une <b>extension</b> qui transforme votre “Nouvel onglet” en portail
-                            citoyen :
-                            services publics, santé, démarches, météo, accès rapide… <b>sans tracking</b>.
-                        </p>
-
-                        <div class="steps">
-                            <div class="step">
-                                <b>1.</b> Télécharger l’extension (ZIP ou Store)
-                            </div>
-                            <div class="step">
-                                <b>2.</b> Ouvrir <span class="code">chrome://extensions</span> (Chrome) ou <span
-                                    class="code">about:addons</span> (Firefox)
-                            </div>
-                            <div class="step">
-                                <b>3.</b> Activer <b>Mode développeur</b> (Chrome) puis <b>Charger l’extension non
-                                    empaquetée</b>
-                            </div>
-                            <div class="step">
-                                <b>4.</b> Ouvrir un nouvel onglet ✅
-                            </div>
-                        </div>
-
-                        <div class="modalCtas">
-                            <a class="promoBtn" id="installLink" href="https://souverain.fr" target="_blank"
-                                rel="noopener">Page projet</a>
-                            <button class="promoBtn ghost" id="copyStepsBtn" type="button">Copier les étapes</button>
-                        </div>
-
-                        <p class="modalSmall">
-                            Pour une mairie : déploiement simple sur postes publics (kiosque / accueil) + raccourcis
-                            utiles.
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="hint">
-                ⌨️ <b>Entrée</b> = lancer • <b>Tab</b> = naviguer • <b>Ctrl+L</b> = barre d’adresse
-            </div>
         </header>
 
         <section class="grid">
+            <!-- Services -->
             <article class="panel">
                 <div class="panelTitle">
                     <span>🇫🇷 Services</span>
@@ -165,6 +113,7 @@
                 </div>
             </article>
 
+            <!-- Outils -->
             <article class="panel">
                 <div class="panelTitle">
                     <span>🧠 Outils</span>
@@ -180,6 +129,7 @@
                 </div>
             </article>
 
+            <!-- Quick Actions -->
             <article class="panel wide">
                 <div class="panelTitle">
                     <span>🎮 Quick Actions</span>
@@ -209,7 +159,7 @@
                 </div>
             </article>
 
-            <!-- ✅ Pub BauxPublics -->
+            <!-- Spotlight BauxPublics -->
             <article class="panel wide promo">
                 <div class="panelTitle">
                     <span>🚀 Spotlight</span>
@@ -238,124 +188,119 @@
                         <div class="pbBot">Pour mairies & pros</div>
                     </div>
                 </div>
-                <!-- Urgences & Services essentiels -->
-                <article class="panel wide essentials">
-                    <div class="panelTitle">
-                        <span>🚨 Urgences & services essentiels</span>
-                        <span class="panelTag">Réflexes</span>
+            </article>
+
+            <!-- Urgences -->
+            <article class="panel wide essentials">
+                <div class="panelTitle">
+                    <span>🚨 Urgences & services essentiels</span>
+                    <span class="panelTag">Réflexes</span>
+                </div>
+
+                <div class="essGrid">
+                    <div class="essBlock">
+                        <h3>📞 Numéros d’urgence</h3>
+                        <ul class="essList">
+                            <li><b>112</b> – Urgences (Europe)</li>
+                            <li><b>15</b> – SAMU</li>
+                            <li><b>17</b> – Police secours</li>
+                            <li><b>18</b> – Pompiers</li>
+                            <li><b>114</b> – Urgence SMS (sourds/malentendants)</li>
+                            <li><b>115</b> – Samu social (hébergement)</li>
+                        </ul>
+                        <p class="essNote">En cas de doute vital : <b>15</b> ou <b>112</b>.</p>
                     </div>
 
-                    <div class="essGrid">
-                        <div class="essBlock">
-                            <h3>📞 Numéros d’urgence</h3>
-                            <ul class="essList">
-                                <li><b>112</b> – Urgences (Europe)</li>
-                                <li><b>15</b> – SAMU</li>
-                                <li><b>17</b> – Police secours</li>
-                                <li><b>18</b> – Pompiers</li>
-                                <li><b>114</b> – Urgence SMS (sourds/malentendants)</li>
-                                <li><b>115</b> – Samu social (hébergement)</li>
-                            </ul>
-                            <p class="essNote">En cas de doute vital : <b>15</b> ou <b>112</b>.</p>
+                    <div class="essBlock">
+                        <h3>🏥 Santé / médical</h3>
+                        <div class="chips">
+                            <a class="chip" href="https://www.ameli.fr/">Ameli</a>
+                            <a class="chip" href="https://www.doctolib.fr/">Doctolib</a>
+                            <a class="chip" href="https://www.sante.fr/">sante.fr</a>
+                            <a class="chip" href="https://www.ordre.pharmacien.fr/">Annuaire pharmacies</a>
                         </div>
 
-                        <div class="essBlock">
-                            <h3>🏥 Santé / médical</h3>
-                            <div class="chips">
-                                <a class="chip" href="https://www.ameli.fr/">Ameli</a>
-                                <a class="chip" href="https://www.doctolib.fr/">Doctolib</a>
-                                <a class="chip" href="https://www.sante.fr/">sante.fr</a>
-                                <a class="chip" href="https://www.ordre.pharmacien.fr/">Annuaire pharmacies</a>
-                            </div>
-
-                            <h3 style="margin-top:12px;">💼 Social / aide</h3>
-                            <div class="chips">
-                                <a class="chip" href="https://www.service-public.fr/">Service-Public</a>
-                                <a class="chip" href="https://www.caf.fr/">CAF</a>
-                                <a class="chip" href="https://www.msa.fr/">MSA</a>
-                            </div>
-                        </div>
-
-                        <div class="essBlock">
-                            <h3>🚗 Titres & identité (démarches)</h3>
-                            <div class="chips">
-                                <a class="chip" href="https://ants.gouv.fr/">ANTS (carte grise, CNI, passeport)</a>
-                                <a class="chip" href="https://permisdeconduire.ants.gouv.fr/">Permis (ANTS)</a>
-                                <a class="chip" href="https://histovec.interieur.gouv.fr/">Histovec</a>
-                                <a class="chip" href="https://www.service-public.fr/particuliers/vosdroits/N19808">Carte
-                                    grise : guide</a>
-                            </div>
-
-                            <h3 style="margin-top:12px;">📱 Permis / carte grise “numérique”</h3>
-                            <div class="chips">
-                                <a class="chip" href="https://france-identite.gouv.fr/">France Identité (appli)</a>
-                                <a class="chip"
-                                    href="https://www.service-public.fr/particuliers/actualites/A17118">Permis numérique
-                                    (info)</a>
-                            </div>
-                            <div class="chips">
-                                <a class="chip" href="https://france-identite.gouv.fr/">France Identité</a>
-                                <a class="chip" href="https://franceconnect.gouv.fr/">FranceConnect</a>
-                            </div>
-
-                        </div>
-
-                        <div class="essBlock">
-                            <h3>🧰 Emploi</h3>
-                            <div class="chips">
-                                <a class="chip" href="https://www.francetravail.fr/">France Travail</a>
-                                <a class="chip" href="https://www.moncompteformation.gouv.fr/">Mon Compte Formation</a>
-                                <a class="chip" href="https://www.mesdroitssociaux.gouv.fr/">Mes droits sociaux</a>
-                            </div>
-
-                            <p class="essNote">
-                                Astuce : garde tes identifiants <b>FranceConnect</b> à jour (ça te sauve la vie).
-                            </p>
+                        <h3 style="margin-top:12px;">💼 Social / aide</h3>
+                        <div class="chips">
+                            <a class="chip" href="https://www.service-public.fr/">Service-Public</a>
+                            <a class="chip" href="https://www.caf.fr/">CAF</a>
+                            <a class="chip" href="https://www.msa.fr/">MSA</a>
                         </div>
                     </div>
-                </article>
 
-                <!-- Jeux français -->
-                <article class="panel wide">
-                    <div class="panelTitle">
-                        <span>🎲 Jeux français</span>
-                        <span class="panelTag">Culture & éducation</span>
-                    </div>
-
-                    <div class="chips">
-                        <a class="chip" href="https://www.1jour1actu.com/">1Jour1Actu (enfants)</a>
-                        <a class="chip" href="https://www.lumni.fr/jeux">Lumni Jeux</a>
-                        <a class="chip" href="https://sutom.nocle.fr/">SUTOM (Motus)</a>
-                        <a class="chip" href="https://www.lemonde.fr/mots-croises/">Mots croisés Le Monde</a>
-                        <a class="chip" href="https://www.sudoku-fr.com/">Sudoku FR</a>
-                    </div>
-                </article>
-
-                <!-- Avis navigateur -->
-                <article class="panel wide">
-                    <div class="panelTitle">
-                        <span>⭐ Votre avis sur Souverain</span>
-                        <span class="panelTag">Amélioration continue</span>
-                    </div>
-
-                    <div class="ratingBox">
-                        <div class="stars" id="stars">
-                            <span data-v="1">☆</span>
-                            <span data-v="2">☆</span>
-                            <span data-v="3">☆</span>
-                            <span data-v="4">☆</span>
-                            <span data-v="5">☆</span>
+                    <div class="essBlock">
+                        <h3>🚗 Titres & identité (démarches)</h3>
+                        <div class="chips">
+                            <a class="chip" href="https://ants.gouv.fr/">ANTS (carte grise, CNI, passeport)</a>
+                            <a class="chip" href="https://permisdeconduire.ants.gouv.fr/">Permis (ANTS)</a>
+                            <a class="chip" href="https://histovec.interieur.gouv.fr/">Histovec</a>
+                            <a class="chip" href="https://www.service-public.fr/particuliers/vosdroits/N19808">Carte
+                                grise : guide</a>
                         </div>
 
-                        <div class="ratingMeta">
-                            Note moyenne : <b><span id="avgRating">--</span>/5</b>
+                        <h3 style="margin-top:12px;">📱 Permis / carte grise “numérique”</h3>
+                        <div class="chips">
+                            <a class="chip" href="https://france-identite.gouv.fr/">France Identité (appli)</a>
+                            <a class="chip" href="https://www.service-public.fr/particuliers/actualites/A17118">Permis
+                                numérique (info)</a>
+                            <a class="chip" href="https://franceconnect.gouv.fr/">FranceConnect</a>
+                        </div>
+                    </div>
+
+                    <div class="essBlock">
+                        <h3>🧰 Emploi</h3>
+                        <div class="chips">
+                            <a class="chip" href="https://www.francetravail.fr/">France Travail</a>
+                            <a class="chip" href="https://www.moncompteformation.gouv.fr/">Mon Compte Formation</a>
+                            <a class="chip" href="https://www.mesdroitssociaux.gouv.fr/">Mes droits sociaux</a>
                         </div>
 
-                        <textarea id="feedback" placeholder="Votre retour (facultatif)…"></textarea>
-                        <button class="promoBtn" id="saveFeedback">Enregistrer</button>
+                        <p class="essNote">
+                            Astuce : garde tes identifiants <b>FranceConnect</b> à jour (ça te sauve la vie).
+                        </p>
                     </div>
-                </article>
+                </div>
+            </article>
 
+            <!-- Jeux -->
+            <article class="panel wide">
+                <div class="panelTitle">
+                    <span>🎲 Jeux français</span>
+                    <span class="panelTag">Culture & éducation</span>
+                </div>
+
+                <div class="chips">
+                    <a class="chip" href="https://www.1jour1actu.com/">1Jour1Actu (enfants)</a>
+                    <a class="chip" href="https://www.lumni.fr/jeux">Lumni Jeux</a>
+                    <a class="chip" href="https://sutom.nocle.fr/">SUTOM (Motus)</a>
+                    <a class="chip" href="https://www.lemonde.fr/mots-croises/">Mots croisés Le Monde</a>
+                    <a class="chip" href="https://www.sudoku-fr.com/">Sudoku FR</a>
+                </div>
+            </article>
+
+            <!-- Avis -->
+            <article class="panel wide">
+                <div class="panelTitle">
+                    <span>⭐ Votre avis sur Souverain</span>
+                    <span class="panelTag">Amélioration continue</span>
+                </div>
+
+                <div class="ratingBox">
+                    <div class="stars" id="stars">
+                        <span data-v="1">☆</span>
+                        <span data-v="2">☆</span>
+                        <span data-v="3">☆</span>
+                        <span data-v="4">☆</span>
+                        <span data-v="5">☆</span>
+                    </div>
+
+                    <div class="ratingMeta">
+                        Note moyenne : <b><span id="avgRating">--</span>/5</b>
+                    </div>
+
+                    <textarea id="feedback" placeholder="Votre retour (facultatif)…"></textarea>
+                    <button class="promoBtn" id="saveFeedback">Enregistrer</button>
+                </div>
             </article>
         </section>
 

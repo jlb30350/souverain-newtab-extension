@@ -1,14 +1,24 @@
 {
     "manifest_version": 3,
     "name": "Souverain New Tab",
-    "version": "1.0",
+    "version": "1.0.0",
+    "description": "Nouvel onglet Souverain : services, recherche Qwant, météo, mode rage.",
     "chrome_url_overrides": {
         "newtab": "newtab.html"
     },
+    "permissions": [
+        "storage"
+    ],
+    "host_permissions": [
+        "https://api.open-meteo.com/*"
+    ],
     "web_accessible_resources": [
         {
             "resources": [
-                "cocorico.mp3"
+                "cocorico.mp3",
+                "logo.png",
+                "souverain.css",
+                "newtab.js"
             ],
             "matches": [
                 "<all_urls>"
