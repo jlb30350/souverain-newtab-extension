@@ -822,3 +822,10 @@ body.rage .wEmoji{
 #installLink:hover, .installLink:hover {
   opacity: .9;
 }
+.shareBox a {
+  color: #00d4ff;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+
