@@ -1043,4 +1043,18 @@ body.rage .wEmoji{
   flex-wrap: nowrap;
 }
 
+.slogan {
+  margin-top: 12px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  color: #ffffff;
+  text-align: center;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.6);
+  opacity: 0.95;
+}
+
+.slogan strong {
+  color: #00e0ff;
+}
 
