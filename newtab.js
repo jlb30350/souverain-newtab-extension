@@ -161,7 +161,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (e.target === modal) modal.style.display = "none";
     });
 
-    // Rage mode
+    // ===== Rage mode =====
     const rageBtn = document.getElementById("rageBtn");
     if (rageBtn) {
         rageBtn.addEventListener("click", () => {
@@ -169,15 +169,46 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // Sound mute (si tu gères un audio ailleurs)
+    // ===== Sound (vrai audio) =====
     const muteBtn = document.getElementById("muteBtn");
     const muteIcon = document.getElementById("muteIcon");
-    if (muteBtn && muteIcon) {
-        muteBtn.addEventListener("click", () => {
-            document.body.classList.toggle("muted");
-            muteIcon.textContent = document.body.classList.contains("muted") ? "🔇" : "🔊";
-        });
+    const bgAudio = document.getElementById("bgAudio");
+
+    async function safePlay(audio) {
+        try {
+            await audio.play();
+            return true;
+        } catch (e) {
+            console.warn("Audio play blocked (browser policy). Click again:", e);
+            return false;
+        }
     }
+
+    if (muteBtn && muteIcon && bgAudio) {
+        // état initial : muet
+        bgAudio.volume = 0.5;
+        bgAudio.muted = true;
+        muteIcon.textContent = "🔇";
+
+        muteBtn.addEventListener("click", async () => {
+            // toggle mute
+            bgAudio.muted = !bgAudio.muted;
+
+            if (!bgAudio.muted) {
+                // la 1ère lecture peut être bloquée si pas d'interaction => ici c'est un clic donc OK
+                const ok = await safePlay(bgAudio);
+                if (!ok) {
+                    bgAudio.muted = true;
+                }
+            }
+
+            muteIcon.textContent = bgAudio.muted ? "🔇" : "🔊";
+            document.body.classList.toggle("muted", bgAudio.muted);
+        });
+    } else {
+        console.warn("Son: éléments manquants (muteBtn/muteIcon/bgAudio). Vérifie les IDs et l'audio.");
+    }
+
 
     startClock();
 });

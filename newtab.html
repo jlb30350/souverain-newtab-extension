@@ -28,14 +28,13 @@
                         <h1 class="title glitch" data-text="SOUVERAIN.FR">SOUVERAIN.FR</h1>
 
                         <div class="toggles">
-                            <button id="muteToggle" class="muteBtn" type="button" aria-pressed="false"
-                                title="Couper / activer le son">
-                                <span class="muteIcon" id="muteIcon">🔊</span>
+                            <button class="muteBtn" id="muteBtn" type="button" aria-label="Son">
+                                <span class="muteIcon" id="muteIcon">🔇</span>
                                 SON
                             </button>
 
-                            <button id="rageToggle" class="rageBtn" type="button" aria-pressed="false">
-                                <span class="rageDot"></span>
+
+                            <button class="rageBtn" id="rageBtn" type="button">
                                 MODE RAGE
                             </button>
                         </div>
@@ -344,6 +343,7 @@
     <div id="rageHud" class="rageHud" hidden>🔥 RAGE MODE</div>
 
     <script src="newtab.js" defer></script>
+    <audio id="bgAudio" src="cocorico.mp3" loop preload="auto"></audio>
 
 </body>
 
