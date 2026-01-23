@@ -69,7 +69,7 @@ body{
 
 .logoFrame{
   position:relative;
-  width:150px; height:150px;
+  width:180px; height:180px;
   flex:0 0 auto;
 }
 
@@ -826,6 +826,221 @@ body.rage .wEmoji{
   color: #00d4ff;
   font-weight: bold;
   text-decoration: underline;
+}
+.favorites {
+  margin-top: 30px;
+}
+
+.fav-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+}
+
+.fav-grid a {
+  background: rgba(255,255,255,0.08);
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  color: #00d4ff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.fav-grid a:hover {
+  background: rgba(255,255,255,0.2);
+  color: white;
+}
+/* ===== Favoris ===== */
+.favorites {
+  margin-top: 14px;
+}
+
+.favorites-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.favorites-head h3 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  opacity: .9;
+}
+
+.btn-edit {
+  border: 0;
+  padding: 6px 12px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 600;
+  background: rgba(255,255,255,.08);
+  color: var(--text);
+  transition: transform .15s ease, background .15s ease;
+}
+.btn-edit:hover {
+  background: rgba(255,255,255,.14);
+  transform: translateY(-1px);
+}
+
+.fav-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+
+
+.fav-link {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 600;
+  font-size: 12px;
+  opacity: .95;
+}
+
+.fav-link:hover {
+  text-decoration: underline;
+}
+
+.fav-edit-one {
+  border: 0;
+  background: rgba(255,255,255,.08);
+  color: var(--text);
+  border-radius: 999px;
+  padding: 4px 8px;
+  cursor: pointer;
+  line-height: 1;
+  font-size: 12px;
+  transition: background .15s ease, transform .15s ease;
+}
+
+.fav-edit-one:hover {
+  background: rgba(255,255,255,.16);
+  transform: translateY(-1px);
+}
+/* Favoris dans un panel */
+.favorites-panel .panelTitle{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+}
+
+
+
+
+.fav-item:hover{
+  transform: translateY(-1px);
+  background: rgba(255,255,255,.10);
+  border-color: rgba(255,255,255,.16);
+}
+
+.fav-link{
+  text-decoration:none;
+  color: var(--text);
+  font-weight:600;
+  font-size:12px;
+  opacity:.95;
+}
+
+.fav-link:hover{
+  text-decoration: underline;
+}
+
+/* petit bouton edit */
+.fav-edit-one{
+  border:0;
+  background: rgba(255,255,255,.08);
+  color: var(--text);
+  border-radius:999px;
+  padding:4px 8px;
+  cursor:pointer;
+  line-height:1;
+  font-size:12px;
+  transition: background .15s ease, transform .15s ease;
+}
+
+.fav-edit-one:hover{
+  background: rgba(255,255,255,.16);
+  transform: translateY(-1px);
+}
+
+/* bouton modifier (global) -> plus clean */
+.btn-edit{
+  border:0;
+  padding:6px 12px;
+  border-radius:999px;
+  cursor:pointer;
+  font-weight:700;
+  background: rgba(255,255,255,.08);
+  color: var(--text);
+  transition: transform .15s ease, background .15s ease;
+}
+
+.btn-edit:hover{
+  background: rgba(255,255,255,.14);
+  transform: translateY(-1px);
+}
+
+
+
+
+
+.
+/* Mes favoris perso */
+#myFavs{
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: nowrap;
+  overflow-x: auto;          /* au cas où tu ajoutes trop */
+  padding-bottom: 6px;
+}
+
+#myFavs .fav-item{
+  position: relative;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.10);
+  text-decoration: none;
+  color: inherit;
+  white-space: nowrap;
+  flex: 0 0 auto;
+}
+#myFavs .fav-del{
+  position: absolute;
+  right: 6px;
+  top: 4px;
+  border: 0;
+  background: rgba(0,0,0,0.35);
+  color: inherit;
+  border-radius: 999px;
+  font-size: 11px;
+  padding: 2px 6px;
+  cursor: pointer;
+  opacity: 0.8;
+}
+#myFavs .fav-del:hover{ opacity: 1; }
+
+.fav-add{
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.08);
+  border: 1px dashed rgba(255,255,255,0.2);
+  color: inherit;
+  font-size: 12px;
+  cursor: pointer;
+}
+#myFavs{
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: nowrap;
 }
 
 

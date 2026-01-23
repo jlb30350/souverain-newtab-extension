@@ -104,223 +104,247 @@
 
 
         </header>
-
-        <section class="grid">
-            <!-- Services -->
-            <article class="panel">
-                <div class="panelTitle">
-                    <span>🇫🇷 Services</span>
-                    <span class="panelTag">Essentiels</span>
-                </div>
-                <div class="chips">
-                    <a class="chip" href="https://www.service-public.fr/">Service-Public</a>
-                    <a class="chip" href="https://www.impots.gouv.fr/">Impôts</a>
-                    <a class="chip" href="https://www.ameli.fr/">Ameli</a>
-                    <a class="chip" href="https://www.legifrance.gouv.fr/">Légifrance</a>
-                    <a class="chip" href="https://www.ants.gouv.fr/">ANTS</a>
-                    <a class="chip" href="https://www.laposte.fr/">La Poste</a>
-                </div>
-            </article>
-
-            <!-- Outils -->
-            <article class="panel">
-                <div class="panelTitle">
-                    <span>🧠 Outils</span>
-                    <span class="panelTag">Productivité</span>
-                </div>
-                <div class="chips">
-                    <a class="chip" href="https://www.qwant.com/">Qwant</a>
-                    <a class="chip" href="https://www.insee.fr/">INSEE</a>
-                    <a class="chip" href="https://www.meteofrance.com/">Météo-France</a>
-                    <a class="chip" href="https://fr.wikipedia.org/">Wikipedia</a>
-                    <a class="chip" href="https://www.lemonde.fr/">Le Monde</a>
-                    <a class="chip" href="https://www.youtube.com/">YouTube</a>
-                </div>
-            </article>
-
-            <!-- Quick Actions -->
-            <article class="panel wide">
-                <div class="panelTitle">
-                    <span>🎮 Quick Actions</span>
-                    <span class="panelTag">Fast</span>
-                </div>
-
-                <div class="actions">
-                    <button class="action" type="button" data-go="https://www.qwant.com/">
-                        <span class="aIcon">🔎</span>
-                        <span class="aText"><b>Qwant</b><small>Recherche</small></span>
-                    </button>
-
-                    <button class="action" type="button" data-go="https://www.service-public.fr/">
-                        <span class="aIcon">🏛️</span>
-                        <span class="aText"><b>Service-Public</b><small>Démarches</small></span>
-                    </button>
-
-                    <button class="action" type="button" data-go="https://www.impots.gouv.fr/">
-                        <span class="aIcon">💶</span>
-                        <span class="aText"><b>Impôts</b><small>Déclarations</small></span>
-                    </button>
-
-                    <button class="action" type="button" data-go="https://www.ameli.fr/">
-                        <span class="aIcon">🩺</span>
-                        <span class="aText"><b>Ameli</b><small>Santé</small></span>
-                    </button>
-                </div>
-            </article>
-
-            <!-- Spotlight BauxPublics -->
-            <article class="panel wide promo">
-                <div class="panelTitle">
-                    <span>🚀 Spotlight</span>
-                    <span class="panelTag">Made in France</span>
-                </div>
-
-                <div class="promoBody">
-                    <div class="promoText">
-                        <h3>BauxPublics.fr</h3>
-                        <p>
-                            La plateforme pour les <b>mairies</b> et <b>collectivités</b> :
-                            gestion des locations (salles, terrains, biens), demandes, documents, suivi…
-                            <b>simple</b>, <b>propre</b>, <b>centralisé</b>.
-                        </p>
-                        <div class="promoCtas">
-                            <a class="promoBtn" href="https://bauxpublics.fr/" target="_blank"
-                                rel="noopener">Découvrir</a>
-                            <a class="promoBtn ghost" href="https://bauxpublics.fr/" target="_blank" rel="noopener">Voir
-                                la démo</a>
+        <!-- Mes favoris-->
+        <article class="panel">
+            <section class="grid">
+                <section class="favorites">
+                    <div class="favorites-head">
+                        <h3>⭐ Mes favoris</h3>
+                        <div class="fav-actions">
+                            <button id="editFavs" class="btn edit">Modifier</button>
+                            <button id="addFav" class="btn add">+ Ajouter</button>
                         </div>
                     </div>
 
-                    <div class="promoBadge">
-                        <div class="pbTop">🇫🇷</div>
-                        <div class="pbMid">BauxPublics</div>
-                        <div class="pbBot">Pour mairies & pros</div>
+                    <div id="myFavs" class="fav-grid"></div>
+
+
+                    <div class="fav-grid"></div>
+                </section><br>
+
+
+
+
+
+
+                <!-- Outils -->
+                <article class="panel">
+                    <div class="panelTitle">
+                        <span>🧠 Outils</span>
+                        <span class="panelTag">Productivité</span>
                     </div>
-                </div>
-            </article>
+                    <div class="chips">
+                        <a class="chip" href="https://www.qwant.com/">Qwant</a>
+                        <a class="chip" href="https://www.insee.fr/">INSEE</a>
+                        <a class="chip" href="https://www.meteofrance.com/">Météo-France</a>
+                        <a class="chip" href="https://fr.wikipedia.org/">Wikipedia</a>
+                        <a class="chip" href="https://www.lemonde.fr/">Le Monde</a>
+                        <a class="chip" href="https://www.youtube.com/">YouTube</a>
+                    </div>
+                </article>
 
-            <!-- Urgences -->
-            <article class="panel wide essentials">
-                <div class="panelTitle">
-                    <span>🚨 Urgences & services essentiels</span>
-                    <span class="panelTag">Réflexes</span>
-                </div>
+                <!-- Services -->
+                <article class="panel">
+                    <div class="panelTitle">
+                        <span>🇫🇷 Services</span>
+                        <span class="panelTag">Essentiels</span>
+                    </div>
+                    <div class="chips">
+                        <a class="chip" href="https://www.service-public.fr/">Service-Public</a>
+                        <a class="chip" href="https://www.impots.gouv.fr/">Impôts</a>
+                        <a class="chip" href="https://www.ameli.fr/">Ameli</a>
+                        <a class="chip" href="https://www.legifrance.gouv.fr/">Légifrance</a>
+                        <a class="chip" href="https://www.ants.gouv.fr/">ANTS</a>
+                        <a class="chip" href="https://www.laposte.fr/">La Poste</a>
+                    </div>
+                </article>
 
-                <div class="essGrid">
-                    <div class="essBlock">
-                        <h3>📞 Numéros d’urgence</h3>
-                        <ul class="essList">
-                            <li><b>112</b> – Urgences (Europe)</li>
-                            <li><b>15</b> – SAMU</li>
-                            <li><b>17</b> – Police secours</li>
-                            <li><b>18</b> – Pompiers</li>
-                            <li><b>114</b> – Urgence SMS (sourds/malentendants)</li>
-                            <li><b>115</b> – Samu social (hébergement)</li>
-                        </ul>
-                        <p class="essNote">En cas de doute vital : <b>15</b> ou <b>112</b>.</p>
+                <!-- Quick Actions -->
+                <article class="panel wide">
+                    <div class="panelTitle">
+                        <span>🎮 Quick Actions</span>
+                        <span class="panelTag">Fast</span>
                     </div>
 
-                    <div class="essBlock">
-                        <h3>🏥 Santé / médical</h3>
-                        <div class="chips">
-                            <a class="chip" href="https://www.ameli.fr/">Ameli</a>
-                            <a class="chip" href="https://www.doctolib.fr/">Doctolib</a>
-                            <a class="chip" href="https://www.sante.fr/">sante.fr</a>
-                            <a class="chip" href="https://www.ordre.pharmacien.fr/">Annuaire pharmacies</a>
+                    <div class="actions">
+                        <button class="action" type="button" data-go="https://www.qwant.com/">
+                            <span class="aIcon">🔎</span>
+                            <span class="aText"><b>Qwant</b><small>Recherche</small></span>
+                        </button>
+
+                        <button class="action" type="button" data-go="https://www.service-public.fr/">
+                            <span class="aIcon">🏛️</span>
+                            <span class="aText"><b>Service-Public</b><small>Démarches</small></span>
+                        </button>
+
+                        <button class="action" type="button" data-go="https://www.impots.gouv.fr/">
+                            <span class="aIcon">💶</span>
+                            <span class="aText"><b>Impôts</b><small>Déclarations</small></span>
+                        </button>
+
+                        <button class="action" type="button" data-go="https://www.ameli.fr/">
+                            <span class="aIcon">🩺</span>
+                            <span class="aText"><b>Ameli</b><small>Santé</small></span>
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Spotlight BauxPublics -->
+                <article class="panel wide promo">
+                    <div class="panelTitle">
+                        <span>🚀 Spotlight</span>
+                        <span class="panelTag">Made in France</span>
+                    </div>
+
+                    <div class="promoBody">
+                        <div class="promoText">
+                            <h3>BauxPublics.fr</h3>
+                            <p>
+                                La plateforme pour les <b>mairies</b> et <b>collectivités</b> :
+                                gestion des locations (salles, terrains, biens), demandes, documents, suivi…
+                                <b>simple</b>, <b>propre</b>, <b>centralisé</b>.
+                            </p>
+                            <div class="promoCtas">
+                                <a class="promoBtn" href="https://bauxpublics.fr/" target="_blank"
+                                    rel="noopener">Découvrir</a>
+                                <a class="promoBtn ghost" href="https://bauxpublics.fr/" target="_blank"
+                                    rel="noopener">Voir
+                                    la démo</a>
+                            </div>
                         </div>
 
-                        <h3 style="margin-top:12px;">💼 Social / aide</h3>
-                        <div class="chips">
-                            <a class="chip" href="https://www.service-public.fr/">Service-Public</a>
-                            <a class="chip" href="https://www.caf.fr/">CAF</a>
-                            <a class="chip" href="https://www.msa.fr/">MSA</a>
+                        <div class="promoBadge">
+                            <div class="pbTop">🇫🇷</div>
+                            <div class="pbMid">BauxPublics</div>
+                            <div class="pbBot">Pour mairies & pros</div>
                         </div>
                     </div>
+                </article>
 
-                    <div class="essBlock">
-                        <h3>🚗 Titres & identité (démarches)</h3>
-                        <div class="chips">
-                            <a class="chip" href="https://ants.gouv.fr/">ANTS (carte grise, CNI, passeport)</a>
-                            <a class="chip" href="https://permisdeconduire.ants.gouv.fr/">Permis (ANTS)</a>
-                            <a class="chip" href="https://histovec.interieur.gouv.fr/">Histovec</a>
-                            <a class="chip" href="https://www.service-public.fr/particuliers/vosdroits/N19808">Carte
-                                grise : guide</a>
+                <!-- Urgences -->
+                <article class="panel wide essentials">
+                    <div class="panelTitle">
+                        <span>🚨 Urgences & services essentiels</span>
+                        <span class="panelTag">Réflexes</span>
+                    </div>
+
+                    <div class="essGrid">
+                        <div class="essBlock">
+                            <h3>📞 Numéros d’urgence</h3>
+                            <ul class="essList">
+                                <li><b>112</b> – Urgences (Europe)</li>
+                                <li><b>15</b> – SAMU</li>
+                                <li><b>17</b> – Police secours</li>
+                                <li><b>18</b> – Pompiers</li>
+                                <li><b>114</b> – Urgence SMS (sourds/malentendants)</li>
+                                <li><b>115</b> – Samu social (hébergement)</li>
+                            </ul>
+                            <p class="essNote">En cas de doute vital : <b>15</b> ou <b>112</b>.</p>
                         </div>
 
-                        <h3 style="margin-top:12px;">📱 Permis / carte grise “numérique”</h3>
-                        <div class="chips">
-                            <a class="chip" href="https://france-identite.gouv.fr/">France Identité (appli)</a>
-                            <a class="chip" href="https://www.service-public.fr/particuliers/actualites/A17118">Permis
-                                numérique (info)</a>
-                            <a class="chip" href="https://franceconnect.gouv.fr/">FranceConnect</a>
+                        <div class="essBlock">
+                            <h3>🏥 Santé / médical</h3>
+                            <div class="chips">
+                                <a class="chip" href="https://www.ameli.fr/">Ameli</a>
+                                <a class="chip" href="https://www.doctolib.fr/">Doctolib</a>
+                                <a class="chip" href="https://www.sante.fr/">sante.fr</a>
+                                <a class="chip" href="https://www.ordre.pharmacien.fr/">Annuaire pharmacies</a>
+                            </div>
+
+                            <h3 style="margin-top:12px;">💼 Social / aide</h3>
+                            <div class="chips">
+                                <a class="chip" href="https://www.service-public.fr/">Service-Public</a>
+                                <a class="chip" href="https://www.caf.fr/">CAF</a>
+                                <a class="chip" href="https://www.msa.fr/">MSA</a>
+                            </div>
+                        </div>
+
+                        <div class="essBlock">
+                            <h3>🚗 Titres & identité (démarches)</h3>
+                            <div class="chips">
+                                <a class="chip" href="https://ants.gouv.fr/">ANTS (carte grise, CNI, passeport)</a>
+                                <a class="chip" href="https://permisdeconduire.ants.gouv.fr/">Permis (ANTS)</a>
+                                <a class="chip" href="https://histovec.interieur.gouv.fr/">Histovec</a>
+                                <a class="chip" href="https://www.service-public.fr/particuliers/vosdroits/N19808">Carte
+                                    grise : guide</a>
+                            </div>
+
+                            <h3 style="margin-top:12px;">📱 Permis / carte grise “numérique”</h3>
+                            <div class="chips">
+                                <a class="chip" href="https://france-identite.gouv.fr/">France Identité (appli)</a>
+                                <a class="chip"
+                                    href="https://www.service-public.fr/particuliers/actualites/A17118">Permis
+                                    numérique (info)</a>
+                                <a class="chip" href="https://franceconnect.gouv.fr/">FranceConnect</a>
+                            </div>
+                        </div>
+
+                        <div class="essBlock">
+                            <h3>🧰 Emploi</h3>
+                            <div class="chips">
+                                <a class="chip" href="https://www.francetravail.fr/">France Travail</a>
+                                <a class="chip" href="https://www.moncompteformation.gouv.fr/">Mon Compte Formation</a>
+                                <a class="chip" href="https://www.mesdroitssociaux.gouv.fr/">Mes droits sociaux</a>
+                            </div>
+
+                            <p class="essNote">
+                                Astuce : garde tes identifiants <b>FranceConnect</b> à jour (ça te sauve la vie).
+                            </p>
                         </div>
                     </div>
+                </article>
 
-                    <div class="essBlock">
-                        <h3>🧰 Emploi</h3>
-                        <div class="chips">
-                            <a class="chip" href="https://www.francetravail.fr/">France Travail</a>
-                            <a class="chip" href="https://www.moncompteformation.gouv.fr/">Mon Compte Formation</a>
-                            <a class="chip" href="https://www.mesdroitssociaux.gouv.fr/">Mes droits sociaux</a>
+                <!-- Jeux -->
+                <article class="panel wide">
+                    <div class="panelTitle">
+                        <span>🎲 Jeux français</span>
+                        <span class="panelTag">Culture & éducation</span>
+                    </div>
+
+                    <div class="chips">
+                        <a class="chip" href="https://www.1jour1actu.com/">1Jour1Actu (enfants)</a>
+                        <a class="chip" href="https://www.lumni.fr/jeux">Lumni Jeux</a>
+                        <a class="chip" href="https://sutom.nocle.fr/">SUTOM (Motus)</a>
+                        <a class="chip" href="https://www.lemonde.fr/mots-croises/">Mots croisés Le Monde</a>
+                        <a class="chip" href="https://www.sudoku-fr.com/">Sudoku FR</a>
+                    </div>
+                </article>
+
+                <!-- Avis -->
+                <article class="panel wide">
+                    <div class="panelTitle">
+                        <span>⭐ Votre avis sur Souverain</span>
+                        <span class="panelTag">Amélioration continue</span>
+                    </div>
+
+                    <div class="ratingBox">
+                        <div class="stars" id="stars">
+                            <span data-v="1">☆</span>
+                            <span data-v="2">☆</span>
+                            <span data-v="3">☆</span>
+                            <span data-v="4">☆</span>
+                            <span data-v="5">☆</span>
                         </div>
 
-                        <p class="essNote">
-                            Astuce : garde tes identifiants <b>FranceConnect</b> à jour (ça te sauve la vie).
-                        </p>
+                        <div class="ratingMeta">
+                            Note moyenne : <b><span id="avgRating">--</span>/5</b>
+                        </div>
+
+                        <textarea id="feedback" placeholder="Votre retour (facultatif)…"></textarea>
+                        <button class="promoBtn" id="saveFeedback">Enregistrer</button>
                     </div>
-                </div>
-            </article>
+                </article>
+            </section>
 
-            <!-- Jeux -->
-            <article class="panel wide">
-                <div class="panelTitle">
-                    <span>🎲 Jeux français</span>
-                    <span class="panelTag">Culture & éducation</span>
-                </div>
-
-                <div class="chips">
-                    <a class="chip" href="https://www.1jour1actu.com/">1Jour1Actu (enfants)</a>
-                    <a class="chip" href="https://www.lumni.fr/jeux">Lumni Jeux</a>
-                    <a class="chip" href="https://sutom.nocle.fr/">SUTOM (Motus)</a>
-                    <a class="chip" href="https://www.lemonde.fr/mots-croises/">Mots croisés Le Monde</a>
-                    <a class="chip" href="https://www.sudoku-fr.com/">Sudoku FR</a>
-                </div>
-            </article>
-
-            <!-- Avis -->
-            <article class="panel wide">
-                <div class="panelTitle">
-                    <span>⭐ Votre avis sur Souverain</span>
-                    <span class="panelTag">Amélioration continue</span>
-                </div>
-
-                <div class="ratingBox">
-                    <div class="stars" id="stars">
-                        <span data-v="1">☆</span>
-                        <span data-v="2">☆</span>
-                        <span data-v="3">☆</span>
-                        <span data-v="4">☆</span>
-                        <span data-v="5">☆</span>
-                    </div>
-
-                    <div class="ratingMeta">
-                        Note moyenne : <b><span id="avgRating">--</span>/5</b>
-                    </div>
-
-                    <textarea id="feedback" placeholder="Votre retour (facultatif)…"></textarea>
-                    <button class="promoBtn" id="saveFeedback">Enregistrer</button>
-                </div>
-            </article>
-        </section>
-
-        <footer class="footer">
-            <span class="tiny">Souverain New Tab • “URL = direct / Texte = Qwant”</span>
-        </footer>
+            <footer class="footer">
+                <span class="tiny">Souverain New Tab • “URL = direct / Texte = Qwant”</span>
+            </footer>
     </main>
 
     <div id="rageHud" class="rageHud" hidden>🔥 RAGE MODE</div>
 
-    <script src="newtab.js"></script>
+    <script src="newtab.js" defer></script>
+
 </body>
 
 </html>
