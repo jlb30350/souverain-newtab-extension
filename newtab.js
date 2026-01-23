@@ -330,3 +330,14 @@ Lien: https://souverain.fr`;
     setInterval(refreshWeather, 30 * 60 * 1000);
     input?.focus();
 })();
+const copyBtn = document.getElementById("copyLinkBtn");
+
+if (copyBtn) {
+    copyBtn.addEventListener("click", () => {
+        navigator.clipboard.writeText(
+            "https://github.com/jlb30350/souverain-newtab-extension/releases/tag/v1.0.1"
+        );
+        alert("Lien copié !");
+    });
+}
+
