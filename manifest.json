@@ -7,10 +7,12 @@
         "newtab": "newtab.html"
     },
     "permissions": [
-        "storage"
+        "storage",
+        "geolocation"
     ],
     "host_permissions": [
-        "https://api.open-meteo.com/*"
+        "https://api.open-meteo.com/*",
+        "https://geocoding-api.open-meteo.com/*"
     ],
     "web_accessible_resources": [
         {
