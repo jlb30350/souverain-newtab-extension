@@ -127,7 +127,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Search
     const searchForm = document.getElementById("searchForm");
-    const searchInput = document.getElementById("searchInput");
+    const searchInput = document.getElementById("q");
+
 
     if (searchForm && searchInput) {
         searchForm.addEventListener("submit", (e) => {
@@ -143,6 +144,14 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
     }
+
+    searchInput.addEventListener("keydown", (e) => {
+        if (e.key === "Enter") {
+            e.preventDefault();
+            searchForm.requestSubmit();
+        }
+    });
+
 
     // Quick actions
     document.querySelectorAll(".action[data-go]").forEach((btn) => {

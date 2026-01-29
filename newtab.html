@@ -75,11 +75,17 @@
                 </div>
             </div>
 
-            <form class="search" id="searchForm">
-                <input id="q" name="q" type="text" placeholder="Recherche Qwant ou URL (ex: impots.gouv.fr) …"
-                    autocomplete="off" autofocus />
-                <button class="btn" type="submit">GO</button>
+            <form id="searchForm" class="search">
+                <input id="q" type="text" placeholder="Recherche Qwant ou URL (ex: impots.gouv.fr) ..." />
+                <button id="btnGo" type="submit" class="btn btn-go">GO</button>
+
+
+
             </form>
+
+
+
+
 
 
 
@@ -114,8 +120,9 @@
                     <div class="favorites-head">
                         <h3>⭐ Mes favoris</h3>
                         <div class="fav-actions">
-                            <button id="editFavs" class="btn edit">Modifier</button>
-                            <button id="addFav" class="btn add">+ Ajouter</button>
+                            <button id="editFavs" class="btn-soft" type="button">Modifier</button>
+                            <button id="addFav" class="btn-soft" type="button">+ Ajouter</button>
+
                         </div>
                     </div>
 

@@ -222,6 +222,18 @@ body{
     0 0 18px rgba(255,42,109,.12);
   transition: transform .12s ease, filter .12s ease;
 }
+
+/* GO = CTA principal (spécifique) */
+.search .btn.btn-go{
+  height: 48px;
+  padding: 0 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+}
+
+
 .btn:hover{ filter: brightness(1.07); transform: translateY(-1px); }
 
 .hint{
@@ -986,11 +998,22 @@ body.rage .wEmoji{
   transform: translateY(-1px);
 }
 
+.btn-soft{
+  border:1px solid rgba(255,255,255,.12);
+  background: rgba(0,0,0,.22);
+  color: rgba(255,255,255,.9);
+  border-radius:14px;
+  padding:10px 12px;
+  font-weight:900;
+  letter-spacing:.04em;
+  cursor:pointer;
+}
+.btn-soft:hover{ filter: brightness(1.08); transform: translateY(-1px); }
 
 
 
 
-.
+
 /* Mes favoris perso */
 #myFavs{
   display: flex;
@@ -1058,3 +1081,24 @@ body.rage .wEmoji{
   color: #00e0ff;
 }
 
+/* === BOUTON GO : ACTION PRINCIPALE === */
+.search .btn{
+  height: 48px;              /* match input visuellement */
+  padding: 0 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+}
+
+
+
+.search-go:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 0 20px rgba(255, 80, 0, 0.8);
+}
+
+.search-go:active {
+  transform: translateY(0);
+  box-shadow: 0 0 10px rgba(255, 60, 0, 0.6);
+}
