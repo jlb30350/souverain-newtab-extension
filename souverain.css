@@ -265,11 +265,19 @@ body{
 
 /* ---------- Panels ---------- */
 .grid{
-  width:min(1100px, 100%);
+  width:min(1200px, 96vw);
   margin:0 auto;
   display:grid;
   grid-template-columns: 1fr 1fr;
   gap:14px;
+}
+
+.favorites-panel{
+  grid-column:1 / -1;
+}
+
+.wide{
+  grid-column:1 / -1;
 }
 
 .panel{
@@ -860,15 +868,41 @@ body.rage .wEmoji{
   font-weight: bold;
   text-decoration: underline;
 }
-.favorites {
-  margin-top: 30px;
+.favorites{
+  margin-top:30px;
+  display:grid;
+  grid-template-columns:1.4fr 1fr;
+  gap:20px;
+  align-items:start;
 }
 
-.fav-grid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 10px;
+.favorites-head{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:12px;
 }
+
+.fav-actions{
+  display:flex;
+  gap:8px;
+}
+
+.fav-grid{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+}
+
+#myFavs{
+  justify-content:flex-start;
+}
+
+#myFavs2{
+  justify-content:flex-start;
+}
+
+
 
 .fav-grid a {
   background: rgba(255,255,255,0.08);
@@ -1037,54 +1071,73 @@ body.rage .wEmoji{
 
 /* Mes favoris perso */
 #myFavs{
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  flex-wrap: nowrap;
-  overflow-x: auto;          /* au cas où tu ajoutes trop */
-  padding-bottom: 6px;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:8px;
+
+  width:100%;
+  max-width:100%;
 }
+
 
 #myFavs .fav-item{
-  position: relative;
-  padding: 6px 10px;
-  border-radius: 999px;
-  background: rgba(255,255,255,0.08);
-  border: 1px solid rgba(255,255,255,0.10);
-  text-decoration: none;
-  color: inherit;
-  white-space: nowrap;
-  flex: 0 0 auto;
+    position: relative;
+
+    max-width: 120px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    padding: 6px 12px;
+    border-radius: 999px;
+
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.10);
+
+    text-decoration: none;
+    color: inherit;
 }
+
 #myFavs .fav-del{
-  position: absolute;
-  right: 6px;
-  top: 4px;
-  border: 0;
-  background: rgba(0,0,0,0.35);
-  color: inherit;
-  border-radius: 999px;
-  font-size: 11px;
-  padding: 2px 6px;
-  cursor: pointer;
-  opacity: 0.8;
+    position: absolute;
+    right: 6px;
+    top: 4px;
+
+    border: 0;
+    background: rgba(0,0,0,0.35);
+    color: inherit;
+
+    border-radius: 999px;
+    font-size: 11px;
+    padding: 2px 6px;
+
+    cursor: pointer;
+    opacity: 0.8;
 }
-#myFavs .fav-del:hover{ opacity: 1; }
+
+#myFavs .fav-del:hover{
+    opacity: 1;
+}
 
 .fav-add{
-  padding: 6px 10px;
-  border-radius: 999px;
-  background: rgba(255,255,255,0.08);
-  border: 1px dashed rgba(255,255,255,0.2);
-  color: inherit;
-  font-size: 12px;
-  cursor: pointer;
+    padding: 6px 10px;
+    border-radius: 999px;
+
+    background: rgba(255,255,255,0.08);
+    border: 1px dashed rgba(255,255,255,0.2);
+
+    color: inherit;
+    font-size: 12px;
+    cursor: pointer;
 }
-#myFavs{
+
+.favs-header{
   display: flex;
-  justify-content: center;
-  gap: 10px;
-  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 700px;
+  margin: 0 auto 12px;
 }
 
 .slogan {
@@ -1114,3 +1167,61 @@ body.rage .wEmoji{
 
 
 
+.favorites-head{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:12px;
+}
+
+.fav-actions{
+    display:flex;
+    gap:8px;
+}
+
+
+
+
+
+/* === FAVORIS : layout propre === */
+.favorites-panel{
+  width: 100%;
+}
+
+.favorites-layout{
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 20px;
+  align-items: start;
+}
+
+.favorites-head{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.fav-actions{
+  display: flex;
+  gap: 8px;
+}
+
+.fav-grid{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+#myFavs,
+#myFavs2{
+  justify-content: flex-start;
+}
+
+#myFavs .fav-item,
+#myFavs2 .chip{
+  max-width: 150px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
